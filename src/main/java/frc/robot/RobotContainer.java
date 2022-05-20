@@ -37,8 +37,12 @@ public class RobotContainer {
   private void configureButtonBindings() {}
 
   public void teleopDrive() {
-    swerveDrive.setDefaultCommand(new RunCommand(() -> swerveDrive.drive(OI.getLeftStickX(driveController),
-    OI.getLeftStickY(driveController), OI.getRightStickX(driveController)), swerveDrive));
+    swerveDrive.setDefaultCommand(new RunCommand(() -> swerveDrive.setChassisSpeedsPercentage(
+      OI.getLeftStickX(driveController),
+      OI.getLeftStickY(driveController), 
+      OI.getRightStickX(driveController)
+    ), swerveDrive));
+
   }
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.

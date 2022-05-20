@@ -23,10 +23,11 @@ public class SwerveModuleConfig {
 
     public SwerveModule createNeoModule() {
         return Mk4SwerveModuleHelper.createNeo(
-                GEAR_RATIO,
-                POWER_ID,
-                STEER_ID,
-                ENCODER_ID,
-                STEER_OFFSET);
+            GEAR_RATIO,
+            POWER_ID,
+            STEER_ID,
+            ENCODER_ID,
+            STEER_OFFSET
+        );
     }
 }
